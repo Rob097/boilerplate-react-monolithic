@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import logo from '@/logo.svg';
 import { Box, Typography } from "@mui/material";
 import "@/index.scss";
+import React from "react";
 
 function App() {
   return (

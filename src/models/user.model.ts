@@ -1,6 +1,6 @@
-import { Filters } from "./criteria.model";
-import { Address } from "./address.model";
-import { SlugDto } from "./baseDto.models";
+import { Filters } from "./criteria.model.ts";
+import { Address } from "./address.model.ts";
+import { SlugDto } from "./baseDto.models.ts";
 
 export class User extends SlugDto {
     firstName: string;
