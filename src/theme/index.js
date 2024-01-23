@@ -1,10 +1,10 @@
-import tailwindConfig from '../tailwind.config';
+import tailwindConfig from '@/tailwind.config';
 import { createTheme } from '@mui/material/styles';
-import boxShadow from '../utilities/functions/boxShadow';
-import hexToRgb from '../utilities/functions/hexToRgb';
-import linearGradient from '../utilities/functions/linearGradient';
-import pxToRem from '../utilities/functions/pxToRem';
-import rgba from '../utilities/functions/rgba';
+import boxShadow from '@/utilities/functions/boxShadow';
+import hexToRgb from '@/utilities/functions/hexToRgb';
+import linearGradient from '@/utilities/functions/linearGradient';
+import pxToRem from '@/utilities/functions/pxToRem';
+import rgba from '@/utilities/functions/rgba';
 import typography from './typography';
 
 const { colors } = tailwindConfig.theme;

@@ -1,5 +1,5 @@
-import { View } from "../models/criteria.model";
-import { User, UserQ } from "../models/user.model";
+import { View } from "@/models/criteria.model";
+import { User, UserQ } from "@/models/user.model";
 import useSWR from 'swr';
 import { BASE_URL, fetcher } from "./base.service";
 const USERS_URL = BASE_URL + '/core/users';

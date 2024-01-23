@@ -1,4 +1,4 @@
-import tailwindConfig from '../tailwind.config';
+import tailwindConfig from '@/tailwind.config';
 import { createTheme } from '@mui/material/styles';
 
 const defaultTheme = createTheme({})

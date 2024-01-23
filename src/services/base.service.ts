@@ -1,4 +1,4 @@
-import { Filters } from "../models/criteria.model";
+import { Filters } from "@/models/criteria.model";
 
 export const fetcher = async (url: string, returnHeaders?: boolean) => {
   const response = fetch(url)

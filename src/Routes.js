@@ -1,7 +1,7 @@
-import { ErrorPage, PageNotFound } from "./pages/ErrorPages";
-import Home from "./pages/home";
+import { ErrorPage, PageNotFound } from "@/pages/ErrorPages";
+import Home from "@/pages/home";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import App from "./App";
+import App from "@/App";
 
 const router = createBrowserRouter([
     {

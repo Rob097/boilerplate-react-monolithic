@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
-import logo from './logo.svg';
+import logo from '@/logo.svg';
 import { Box, Typography } from "@mui/material";
-import "./index.scss";
+import "@/index.scss";
 
 function App() {
   return (
-    <div className="App bg-primary-main">
+    <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,8 +19,8 @@ function App() {
         >
           Learn React
         </a>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
+        <h1 className="font-bold underline">
+          Hello world 3!
         </h1>
         <Box
           sx={(theme) => ({
@@ -35,7 +35,9 @@ function App() {
             Hello world!
           </Typography>
       </header>
+
       <Outlet />
+      
     </div>
   );
 }
