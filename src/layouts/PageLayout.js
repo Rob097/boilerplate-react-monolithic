@@ -1,9 +1,8 @@
+import Navbar from "@/components/navbar/headerNavbar";
 import tailwindConfig from '@/tailwind.config.js';
 import Box from '@mui/material/Box';
 import PropTypes from "prop-types";
 import classes from './PageLayout.module.scss';
-import Navbar from "@/components/navbar/headerNavbar";
-import { Outlet } from 'react-router-dom';
 
 function PageLayout(props) {
     return (
@@ -24,7 +23,7 @@ function PageLayout(props) {
                 width: "100%",
                 marginTop: props.top
             }}>
-                <Outlet />
+                {props.children}
             </Box>
 
             <BgVector />

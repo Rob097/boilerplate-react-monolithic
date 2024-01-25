@@ -1,30 +1,26 @@
-import { ErrorPage, PageNotFound } from "@/pages/ErrorPages";
+import App from "@/App";
+import { PageNotFound } from "@/pages/ErrorPages";
 import Home from "@/pages/home";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import App from "@/App";
-import PageLayout from "@/layouts/PageLayout";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <PageLayout />,
-        errorElement: <ErrorPage />,
+        element: <App />,
         children: [
             {
-                path: "/",
-                element: <App />,
-                children: [
-                    {
-                        path: "home",
-                        element: <Home />,
-                    }
-                ]
-            },
-            {
-                path: "*",
-                element: <PageNotFound />
+                path: "home",
+                element: <Home />,
             }
         ]
+    },
+    {
+        path: "/home2",
+        element: <Home />
+    },
+    {
+        path: "*",
+        element: <PageNotFound />
     }
 ]);
 
