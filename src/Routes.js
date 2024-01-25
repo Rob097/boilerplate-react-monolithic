@@ -1,7 +1,20 @@
 import App from "@/App";
-import { PageNotFound } from "@/pages/ErrorPages";
+import { PageNotFound, NotAllowed } from "@/pages/ErrorPages";
 import Home from "@/pages/home";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Navigate, Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+
+const ProtectedRoute = ({
+    isAllowed,
+    customRedirect,
+    defaultRedirect = '/not-allowed',
+    children,
+}) => {
+    if (!isAllowed) {
+        return <Navigate to={customRedirect || defaultRedirect} replace />;
+    }
+
+    return children ? children : <Outlet />;
+};
 
 const router = createBrowserRouter([
     {
@@ -16,7 +29,11 @@ const router = createBrowserRouter([
     },
     {
         path: "/home2",
-        element: <Home />
+        element: <ProtectedRoute isAllowed={false}><Home /></ProtectedRoute>
+    },
+    {
+        path: "/not-allowed",
+        element: <NotAllowed />
     },
     {
         path: "*",
